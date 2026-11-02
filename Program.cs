@@ -10,7 +10,7 @@ namespace git
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("==Utflyktsgeneratorn==");
+            Console.WriteLine("== Utflyktsgeneratorn ==");
 
             Console.Write("Hur stor är din budget? ");
             int budget = Convert.ToInt32(Console.ReadLine());
@@ -27,8 +27,11 @@ namespace git
             Console.Write("Hur stor rabatt har alla? ");
             int rabatt = Convert.ToInt32(Console.ReadLine());
 
+            Console.Write("Vad är kostnad för entré? ");
+            int entre = Convert.ToInt32(Console.ReadLine());
+
             //Räknar ut hur mycket maten och resan kostar för en person.
-            int KostnadPerPerson = resan + mat;
+            int KostnadPerPerson = resan + mat + entre;
 
             // gruppens totala kostnad
             int TotalKostnad = KostnadPerPerson * antal - rabatt;
@@ -39,11 +42,11 @@ namespace git
 
             if (TotalKostnad > budget)
             {
-                Console.WriteLine("du har inte tilräkligt med pengar");
+                Console.WriteLine("Du har inte tillräkligt med pengar.");
             }
             else if (TotalKostnad <= budget )
             {
-                Console.WriteLine("du har tillräkligt med pengar");
+                Console.WriteLine("Du har tillräkligt med pengar.");
             }
 
         }
