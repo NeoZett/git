@@ -30,10 +30,10 @@ namespace git
             Console.Write("Vad är kostnad för entré? ");
             int entre = Convert.ToInt32(Console.ReadLine());
 
-            //Räknar ut hur mycket maten och resan kostar för en person.
+            // Räknar ut hur mycket maten och resan kostar för en person.
             int KostnadPerPerson = resan + mat + entre;
 
-            // gruppens totala kostnad
+            // Gruppens totala kostnad
             int TotalKostnad = KostnadPerPerson * antal - rabatt;
             Console.WriteLine();
 
